@@ -1,9 +1,11 @@
-const Port = require('../src/Port');
 const Itinerary = require('../src/itinerary');
 
-describe('Port', () => {
+const Port = require('../src/Port');
+
+describe('Itinerary', () => {
   it('can be instantiated', () => {
-    expect(new Port()).toBeInstanceOf(Object);
+
+    expect(new Itinerary()).toBeInstanceOf(Object);
   });
 });
 
@@ -11,10 +13,7 @@ describe('Itinerary', () => {
   it('can have ports', () => {
     const liverpool = new Port('Liverpool');
     const calais = new Port('Calais');
-
     const itinerary = new Itinerary([liverpool, calais]);
-
     expect(itinerary.ports).toEqual([liverpool, calais]);
-
   });
 });
